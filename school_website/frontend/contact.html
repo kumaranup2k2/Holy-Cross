@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - HOLY CROSS PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>HOLY CROSS PUBLIC SCHOOL</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="notice.html">Notice Board</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <p>Contact Us</p>
+    </header>
+
+    <main class="contact">
+        <h2>Get in Touch</h2>
+        <p>You can reach out to us via the form below or visit the school campus during working hours.</p>
+
+        <div class="contact-container">
+            <form id="contactForm">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+                <p id="contactStatus" class="success"></p>
+            </form>
+
+            <div class="contact-info">
+                <h3>School Address</h3>
+                <p>Holy Cross Public School,<br>
+                   Near Adi palli Durga Puja Pandal<br>
+                   Adi Palli, Chandrapura,<br>
+                   Boakro, Jharkhand- 828403<br>
+                   Phone: +91-XXXXXXXXXX<br>
+                   Email: holycrosspublic.edu.in</p>
+                
+                <h3>Location Map</h3>
+                <div class="map-placeholder">
+                    <p>[Map Placeholder]</p>
+                    <!-- You can replace with actual Google Maps iframe later -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HOLY CROSS PUBLIC SCHOOL. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const contactStatus = document.getElementById("contactStatus");
+
+        contactForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            contactStatus.textContent = "Message sent successfully! (dummy only)";
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>

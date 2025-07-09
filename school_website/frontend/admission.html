@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admission - HOLY CROSS PUBLIC SCHOOL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>HOLY CROSS PUBLIC SCHOOL</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="admission.html" class="active">Admission</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="notice.html">Notice Board</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <p>Admission Information</p>
+    </header>
+
+    <main class="admission">
+        <h2>Admission Process</h2>
+        <p>Admissions are open for the academic year 2025-2026. Kindly follow the steps below to apply:</p>
+
+        <ol>
+            <li>Fill out the application form below.</li>
+            <li>Submit required documents at the school office.</li>
+            <li>Appear for the entrance test (Grade Nursery and above).</li>
+            <li>Pay the admission fees upon selection.</li>
+        </ol>
+
+        <h3>Eligibility Criteria</h3>
+        <ul>
+            <li><strong>Nursery:</strong> Minimum age 3 years.</li>
+            <li><strong>Class 1:</strong> Minimum age 6 years.</li>
+            <li>Valid birth certificate and previous academic records required.</li>
+        </ul>
+
+        <h3>Admission Enquiry Form</h3>
+        <form id="admissionForm">
+            <label for="name">Student's Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="class">Class Applying For:</label>
+            <input type="text" id="class" name="class" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="parent">Parent/Guardian Name:</label>
+            <input type="text" id="parent" name="parent" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="message">Additional Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="formStatus" class="success"></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HOLY CROSS PUBLIC SCHOOL. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const form = document.getElementById("admissionForm");
+        const status = document.getElementById("formStatus");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            status.textContent = "Form submitted successfully! (dummy only)";
+            form.reset();
+        });
+    </script>
+</body>
+</html>

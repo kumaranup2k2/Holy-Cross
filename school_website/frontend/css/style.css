@@ -1,0 +1,322 @@
+/* Root Theme Variables */
+:root {
+    --primary: #003366;
+    --primary-light: #0059b3;
+    --bg: #f0f8ff;
+    --white: #ffffff;
+    --text: #333;
+    --gray-light: #e0e0e0;
+    --card-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Base Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: clamp(1rem, 2.2vw, 1.1rem);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1.1rem;
+    color: var(--gray-light);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--primary-light);
+}
+
+/* Main Section */
+main {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+    animation: slideUp 0.8s ease-out;
+}
+
+.home-img {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Card Sections (About, Admission, Academics, Notice) */
+.about, .admission, .academics, .notice-board {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    line-height: 1.8;
+}
+
+.about h2, .about h3,
+.admission h2, .admission h3,
+.academics h2, .academics h3,
+.notice-board h2 {
+    color: var(--primary);
+}
+
+.about ul,
+.academics ul, .academics ol,
+.admission ul, .admission ol {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Admission Form */
+#admissionForm {
+    margin-top: 20px;
+}
+
+#admissionForm label,
+.contact-container label,
+.login-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#admissionForm input,
+#admissionForm textarea,
+.contact-container input,
+.contact-container textarea,
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#admissionForm input:focus,
+#admissionForm textarea:focus,
+.contact-container input:focus,
+.contact-container textarea:focus,
+.login-container input:focus {
+    border-color: var(--primary-light);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 89, 179, 0.3);
+}
+
+#admissionForm button,
+.contact-container button,
+.login-container button,
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#admissionForm button:hover,
+.contact-container button:hover,
+.login-container button:hover,
+button:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Success & Error Messages */
+.success {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Gallery */
+.gallery {
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact */
+.contact {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.contact-container form,
+.contact-container .contact-info {
+    flex: 1 1 45%;
+}
+
+.map-placeholder {
+    margin-top: 10px;
+    background: var(--gray-light);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+/* Notices */
+.notices {
+    list-style: none;
+    padding-left: 0;
+}
+
+.notices li {
+    background-color: #f5faff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 6px solid var(--primary);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    font-size: 1.05rem;
+}
+
+/* Login */
+.login-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
