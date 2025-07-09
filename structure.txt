@@ -1,0 +1,15 @@
+school-website/
+├── index.html
+├── about.html
+├── admission.html
+├── academics.html
+├── contact.html
+├── gallery.html
+├── login.html
+├── dashboard.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── assets/
+    └── images/
