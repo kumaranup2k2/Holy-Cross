@@ -1,12 +1,79 @@
-/* Root Theme Variables */
+/* Root Theme Variables*/
 :root {
-    --primary: #003366;
-    --primary-light: #0059b3;
-    --bg: #f0f8ff;
+    --primary: #8DBCC7;
+    --primary-light: #A4CCD9;
+    --accent: #EBFFD8;
+    --bg: #F8FCFF;
     --white: #ffffff;
-    --text: #333;
-    --gray-light: #e0e0e0;
-    --card-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    --text: #2f2f2f;
+    --gray-light: #C4E1E6;
+    --card-shadow: 0 8px 15px rgba(141, 188, 199, 0.2);
+}
+
+/*Mobile Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 8px 0;
+    }
+
+    .about, .admission, .academics, .notice-board,
+    .gallery, .contact {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-container form,
+    .contact-container .contact-info {
+        width: 100%;
+    }
+
+    .login-container {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    .home-img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    button,
+    input,
+    textarea {
+        font-size: 1rem;
+    }
+
+    .gallery-grid img:hover {
+        transform: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 }
 
 /* Base Reset & Font */
@@ -75,7 +142,8 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    background-color: var(--primary-light);
+    background-color: var(--accent);
+    color: var(--primary);
 }
 
 /* Main Section */
@@ -88,7 +156,7 @@ main {
 
 .home-img {
     width: 90%;
-    max-width: 600px;
+    max-width: 900px;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -97,7 +165,7 @@ main {
 
 .home-img:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(141, 188, 199, 0.5);
 }
 
 /* Footer */
@@ -110,13 +178,14 @@ footer {
     margin-top: auto;
 }
 
-/* Card Sections (About, Admission, Academics, Notice) */
+/* Card Sections */
 .about, .admission, .academics, .notice-board {
     max-width: 800px;
     margin: 30px auto;
     padding: 30px;
     background-color: var(--white);
     border-radius: 10px;
+    border-left: 6px solid var(--primary);
     box-shadow: var(--card-shadow);
     line-height: 1.8;
 }
@@ -165,9 +234,9 @@ footer {
 .contact-container input:focus,
 .contact-container textarea:focus,
 .login-container input:focus {
-    border-color: var(--primary-light);
+    border-color: var(--primary);
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 89, 179, 0.3);
+    box-shadow: 0 0 5px rgba(141, 188, 199, 0.6);
 }
 
 #admissionForm button,
@@ -177,7 +246,7 @@ button {
     margin-top: 20px;
     padding: 10px 20px;
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: var(--white);
+    color: var(--text);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -190,7 +259,7 @@ button {
 .contact-container button:hover,
 .login-container button:hover,
 button:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px) scale(1.03);
 }
 
 /* Success & Error Messages */
@@ -235,7 +304,7 @@ button:hover {
 
 .gallery-grid img:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(141, 188, 199, 0.5);
 }
 
 /* Contact */
@@ -270,6 +339,7 @@ button:hover {
     text-align: center;
     border-radius: 10px;
     font-style: italic;
+    color: #333;
 }
 
 /* Notices */
@@ -279,7 +349,7 @@ button:hover {
 }
 
 .notices li {
-    background-color: #f5faff;
+    background-color: var(--accent);
     padding: 15px;
     margin-bottom: 15px;
     border-left: 6px solid var(--primary);
@@ -319,4 +389,9 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Smooth Transitions for Elements */
+img, input, button, textarea {
+    transition: all 0.3s ease;
 }
