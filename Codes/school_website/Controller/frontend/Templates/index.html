@@ -1,37 +1,212 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HOLY CROSS PUBLIC SCHOOL</title>
+    <title>Play School - Welcome</title>
     <link rel="stylesheet" href="../Styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>HOLY CROSS PUBLIC SCHOOL</h1>
-        <nav>
+    <header class="header">
+        <h1 class="logo">HOLY CROSS PUBLIC SCHOOL</h1>
+        <nav class="navbar">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="admission.html">Admission</a></li>
-                <li><a href="academics.html">Academics</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="notice.html">Notice Board</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#admission">Admission</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contacts">Contact</a></li>
+                <li><a href="#notice">Notice Board</a></li>
+                <li><a href="result.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <section id="home">
         <section class="welcome">
             <h2>Welcome to Holy Cross Public School</h2>
             <p>At Holy Cross Public School, we believe in nurturing excellence through education, discipline, and creativity. Our faculty and facilities provide a supportive environment for holistic student development.</p>
             <img src="../Resources/front image.jpg" alt="School Building" class="home-img">
         </section>
-    </main>
+    </section>
+
+    <section id="about">
+        <main class="about">
+            <h2>About Holy Cross Public School</h2>
+            <p>
+                Holy Cross Public School is a place of excellence where children can achieve full potential in their academic, creative, personal, physical, moral, and spiritual development.
+            </p>
+            <p>
+                Founded in 2005, we have grown into a reputed institution that focuses on innovation in teaching, holistic development, and preparing students for the challenges of tomorrow.
+            </p>
+            <h3>Our Vision</h3>
+            <p>
+                To become a leading center of education that empowers students to become responsible global citizens through knowledge, discipline, and compassion.
+            </p>
+            <h3>Our Mission</h3>
+            <ul>
+                <li>Provide high-quality education with modern teaching methods.</li>
+                <li>Foster creativity, curiosity, and leadership in students.</li>
+                <li>Promote cultural and moral values with strong character development.</li>
+            </ul>
+        </main>
+        <h2>Our Classes</h2>
+        <ul>
+            <li>Play Group</li>
+            <li>Nursery</li>
+            <li>KG I</li>
+            <li>KG II</li>
+        </ul>
+    </section>
+
+    <section id="admission">
+        <h2>Admission Process</h2>
+            <p>Admissions are open for the academic year 2025-2026. Kindly follow the steps below to apply:</p>
+
+            <ol>
+                <li>Fill out the application form below.</li>
+                <li>Submit required documents at the school office.</li>
+                <li>Appear for the entrance test (Grade Nursery and above).</li>
+                <li>Pay the admission fees upon selection.</li>
+            </ol>
+
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Nursery:</strong> Minimum age 3 years.</li>
+                <li><strong>Class 1:</strong> Minimum age 6 years.</li>
+                <li>Valid birth certificate and previous academic records required.</li>
+            </ul>
+
+        <h3>Admission Enquiry Form</h3>
+            <form id="admissionForm">
+                <label for="name">Student's Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="class">Class Applying For:</label>
+                <input type="text" id="class" name="class" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="parent">Parent/Guardian Name:</label>
+                <input type="text" id="parent" name="parent" required>
+
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+
+                <label for="message">Additional Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <p id="formStatus" class="success"></p>
+    </section>
+
+    <section id="academics">
+         <h2>Our Academic Structure</h2>
+        <p>We provide a well-balanced academic curriculum that encourages curiosity, creativity, and clarity of concept. Our education system follows the latest CBSE/ICSE guidelines and supports both traditional values and modern thinking.</p>
+
+        <h3>Subjects Offered</h3>
+        <ul>
+            <li>Mathematics</li>
+            <li>Science (Physics, Chemistry, Biology)</li>
+            <li>English Language and Literature</li>
+            <li>Social Science (History, Civics, Geography)</li>
+            <li>Computer Science</li>
+            <li>Environmental Studies</li>
+            <li>Second Languages (Hindi/Bengali)</li>
+            <li>Arts, Music, and Physical Education</li>
+        </ul>
+
+        <h3>Academic Calendar</h3>
+        <p>We follow a trimester system:</p>
+        <ol>
+            <li><strong>Term 1:</strong> April – July</li>
+            <li><strong>Term 2:</strong> August – November</li>
+            <li><strong>Term 3:</strong> December – March</li>
+        </ol>
+
+        <h3>Evaluation System</h3>
+        <p>Student assessments include:</p>
+        <ul>
+            <li>Unit Tests and Assignments</li>
+            <li>Mid-term and Final Exams</li>
+            <li>Project Work and Group Activities</li>
+            <li>Regular Class Participation</li>
+        </ul>
+    </section>
+    
+    <section id="contacts">
+        <h2>Contact Us</h2>
+        <h3>Get in Touch</h3>
+        <p>You can reach out to us via the form below or visit the school campus during working hours.</p>
+
+      <div class="contact-info-container">
+        <div class="school-address">
+          <h3>School Address</h3>
+          <p>
+            Holy Cross Public School,<br />
+            Near Adi palli Durga Puja Pandal<br />
+            Adi Palli, Chandrapura,<br />
+            Boakro, Jharkhand - 828403<br />
+            Phone: +91-XXXXXXXXXX<br />
+            Email: holycrosspublic.edu.in
+          </p>
+        </div>
+
+        <div class="map-container">
+          <h3>Location Map</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d913.0008665890015!2d86.1102134!3d23.7472558!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f419e275758581%3A0x8ebaa05eda3ae893!2sHoly%20cross%20public%20school!5e0!3m2!1sen!2sin!4v1752336005243!5m2!1sen!2sin"
+            width="100%"
+            height="150"
+            style="border:0; border-radius:10px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+    <div class="contact-container">
+      <form id="contactForm">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+        <p id="contactStatus" class="success"></p>
+      </form>
+      </div>
+    </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Check out our vibrant moments and playful memories in the classroom, garden, and festivals!</p>
+    </section>
+
+    <div class="notice-board">
+    <section id="notice">
+    <h2>Latest Announcements</h2>
+    <ul class="notices">
+        <li><strong>📅 05 July 2025:</strong> School will remain closed on 7th July for local festival.</li>
+        <li><strong>📝 01 July 2025:</strong> Unit Test for classes 6-10 will begin from 10th July.</li>
+        <li><strong>📢 28 June 2025:</strong> Annual Sports Day will be held on 15th August 2025.</li>
+        <li><strong>📄 20 June 2025:</strong> Report cards for Term I will be distributed from 25th June.</li>
+    </ul>
+    </section>
+    </div>
 
     <footer>
         <p>&copy; 2025 HOLY CROSS PUBLIC SCHOOL. All rights reserved.</p>
     </footer>
+
+    <script src="../Script/script.js"></script>
 </body>
 </html>
